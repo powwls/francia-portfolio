@@ -1038,9 +1038,10 @@ main,
   display: grid;
   gap: 18px;
   padding: 34px 40px;
-  border: 1px solid rgba(167, 139, 250, 0.4);
+  border: 1px solid rgba(94, 234, 212, 0.3);
   border-radius: 8px;
-  background: rgba(22, 31, 57, 0.72);
+  background: var(--panel);
+  box-shadow: var(--shadow);
 }
 
 .contact-intro h2 {
@@ -1080,7 +1081,7 @@ main,
 }
 
 .contact-detail a {
-  color: #b39aff;
+  color: var(--secondary);
   font-size: 1.05rem;
 }
 
@@ -1096,8 +1097,8 @@ main,
   justify-content: center;
   min-height: 45px;
   padding: 0.7rem 1.15rem;
-  color: #b39aff;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--secondary);
+  border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
   border-radius: 8px;
   font-weight: 700;
@@ -1105,14 +1106,15 @@ main,
 }
 
 .contact-button.primary {
-  color: #fff;
-  border-color: #a78bfa;
-  background: #a78bfa;
+  color: #04151d;
+  border-color: transparent;
+  background: linear-gradient(135deg, #7cf5e0 0%, var(--primary) 35%, #7aa3ff 100%);
+  box-shadow: 0 18px 35px rgba(94, 234, 212, 0.18);
 }
 
 .contact-button:hover,
 .contact-button:focus-visible {
-  border-color: #a78bfa;
+  border-color: var(--primary);
   transform: translateY(-2px);
 }
 
