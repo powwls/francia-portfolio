@@ -1,67 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="John Paul Francia">
+    <link rel="website icon" type="png" size="1000x500"
+        href="images/logo.png">
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>John Paul Francia | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <title>Your Name | Portfolio</title>
+  <body>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="John Paul Francia home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="images/logo.png" alt="John Paul Francia logo" />
+          </span>
+          <span>John Paul Francia</span>
+        </a>
 
-<body>
-
-    <header>
-        <h1>Your Name</h1>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="#process">Work Process</a>
+          <a href="#contact">Contact</a>
         </nav>
+      </div>
     </header>
 
     <main>
-
-        <section id="home">
-            <h2>Hello, I'm Your Name 👋</h2>
-            <p>BSIT Student | Aspiring Web Developer</p>
-
-            <button onclick="showMessage()">
-                View My Work
-            </button>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am a Bachelor of Science in Information Technology student
-                interested in web development and technology.
+      <section id="home" class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Hello, It’s Me</p>
+            <h1>
+              <span class="highlight-text">John Paul</span>
+              <span class="highlight-block">Francia</span>
+            </h1>
+            <p class="title-line">
+              And I’m a <span>Web Developer</span>
             </p>
-        </section>
+            <p class="lead">
+              I’m a web developer and designer focused on building modern,
+              clean, and user-centered digital experiences that feel premium and memorable.
+            </p>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of your project.</p>
+            <div class="hero-actions">
+              <a href="#work" class="button primary">View Projects</a>
+              <a href="#contact" class="button secondary">Hire Me</a>
             </div>
 
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of your project.</p>
+            <div class="social-row" aria-label="Social links">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="Instagram">◎</a>
+              <a href="#" aria-label="Dribbble">◌</a>
+              <a href="#" aria-label="Behance">◍</a>
             </div>
-        </section>
+          </div>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>Email: your@email.com</p>
-        </section>
+          <div class="hero-visual reveal">
+            <div class="profile-stage" aria-label="Profile image">
+              <div class="profile-orbit orbit-one"></div>
+              <div class="profile-orbit orbit-two"></div>
 
+              <div class="profile-shell">
+                <div class="profile-image-wrap">
+                  <img src="images/profile.jpg" alt="John Paul Francia portrait" />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container about-simple reveal">
+          <div class="about-intro">
+            <p class="section-label">About</p>
+            <h2>Fresh graduate web developer focused on building simple, useful, and user-friendly experiences.</h2>
+          </div>
+
+          <div class="about-content">
+            <p>
+              I’m John Paul Francia, a recent graduate in Information Technology who enjoys
+              web development, user interface design, and turning ideas into practical digital solutions.
+            </p>
+            <p>
+              I like creating clean and responsive websites that are easy to use, visually balanced,
+              and helpful for real people.
+            </p>
+          </div>
+
+          <div class="about-tags" aria-label="Skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section work">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">Portfolio</p>
+            <h2>Work that looks sharp and performs well.</h2>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <div class="project-visual visual-one"></div>
+              <div class="project-info">
+                <div class="tag-row">
+                  <span>Branding</span>
+                  <span>UI/UX</span>
+                </div>
+                <h3>Northstar Studio</h3>
+                <p>Luxury portfolio experience with editorial layouts and subtle motion.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-visual visual-two"></div>
+              <div class="project-info">
+                <div class="tag-row">
+                  <span>Web App</span>
+                  <span>Development</span>
+                </div>
+                <h3>NovaOps Dashboard</h3>
+                <p>Modern SaaS interface focused on clarity, conversion, and usability.</p>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-visual visual-three"></div>
+              <div class="project-info">
+                <div class="tag-row">
+                  <span>Landing Page</span>
+                  <span>Strategy</span>
+                </div>
+                <h3>Monarch Launch</h3>
+                <p>High-converting launch page built to tell a story and guide action.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">Skills</p>
+            <h2>Core strengths behind the work.</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card reveal">
+              <span class="skill-badge">Frontend</span>
+              <h3>HTML, CSS, JavaScript</h3>
+              <p>Crafting responsive and visually engaging interfaces with clean structure.</p>
+            </div>
+
+            <div class="skill-card reveal">
+              <span class="skill-badge">Design</span>
+              <h3>UI/UX Thinking</h3>
+              <p>Designing intuitive user flows, modern layouts, and brand-centered experiences.</p>
+            </div>
+
+            <div class="skill-card reveal">
+              <span class="skill-badge">Development</span>
+              <h3>Responsive Websites</h3>
+              <p>Building polished pages that adapt smoothly across devices and screen sizes.</p>
+            </div>
+
+            <div class="skill-card reveal">
+              <span class="skill-badge">Creative</span>
+              <h3>Brand Presentation</h3>
+              <p>Turning big ideas into story-driven visuals with strong visual hierarchy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section process">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-label">Work Process</p>
+            <h2>Simple, smooth, and built for results.</h2>
+          </div>
+
+          <div class="process-grid">
+            <div class="process-card reveal">
+              <span class="process-number">01</span>
+              <h3>Discover</h3>
+              <p>We define goals, audience, and the feeling your brand should create.</p>
+            </div>
+
+            <div class="process-card reveal">
+              <span class="process-number">02</span>
+              <h3>Design</h3>
+              <p>We shape layouts, typography, and interactions into a premium visual direction.</p>
+            </div>
+
+            <div class="process-card reveal">
+              <span class="process-number">03</span>
+              <h3>Develop</h3>
+              <p>We turn the design into responsive, accessible, and performance-minded code.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonial">
+        <div class="container">
+          <div class="quote-box reveal">
+            <p>
+              “John combines creativity with technical discipline, making every interaction feel intentional and polished.”
+            </p>
+            <div class="quote-author">
+              <span class="quote-dot"></span>
+              <div>
+                <strong>Creative Direction</strong>
+                <small>Portfolio feedback</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="container contact-wrap reveal">
+          <div>
+            <p class="section-label">Contact</p>
+            <h2>Let’s build something memorable.</h2>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:johnpaulfrancia@email.com">johnpaulfrancia@email.com</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© <span id="year"></span> John Paul Francia</p>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
