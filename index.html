@@ -56,12 +56,6 @@
               <a href="#contact" class="button secondary">Hire Me</a>
             </div>
 
-            <div class="social-row" aria-label="Social links">
-              <a href="#" aria-label="Facebook">f</a>
-              <a href="#" aria-label="Instagram">◎</a>
-              <a href="#" aria-label="Dribbble">◌</a>
-              <a href="#" aria-label="Behance">◍</a>
-            </div>
           </div>
 
           <div class="hero-visual reveal">
@@ -120,12 +114,12 @@
               <div class="project-info">
                 <div class="tag-row">
                   <span>E-Commerce</span>
-                  <span>HTML</span>
                   <span>PHP</span>
                   <span>JavaScript</span>
                 </div>
                 <h3>Purrfect Pets</h3>
-                <p>Luxury portfolio experience with editorial layouts and subtle motion.</p>
+                <p>Designed and developed a pet e-commerce website using HTML, CSS, PHP and JavaScript 
+                  with a responsive and user-friendly interface.</p>
               </div>
             </article>
 
@@ -138,7 +132,8 @@
                   <span>MySQL</span>
                 </div>
                 <h3>Snoopy</h3>
-                <p>Modern SaaS interface focused on clarity, conversion, and usability.</p>
+                <p>Developed a finance tracker application system using Python, focusing on data 
+                  processing, expense tracking, and financial summaries.</p>
               </div>
             </article>
 
@@ -151,10 +146,27 @@
                   <span>MySQL</span>
                 </div>
                 <h3>Brew's Co.</h3>
-                <p>High-converting launch page built to tell a story and guide action.</p>
+                <p>Designed and developed a complete POS application system using Java, 
+                  handling sales transactions and product management.</p>
               </div>
             </article>
           </div>
+
+          <button class="project-card capstone-card reveal" type="button" aria-haspopup="dialog" aria-controls="capstone-modal">
+            <div class="project-visual capstone-visual"></div>
+            <div class="project-info">
+              <div class="tag-row">
+                <span>Capstone Project</span>
+                <span>Hardware</span>
+                <span>Web App</span>
+              </div>
+              <h3>TOMATOWISE</h3>
+              <p class="capstone-title">Machine Learning-Based Tomato Care System With Prescriptive Analytics for Efficient Water Use and Early Blight Detection in a Greenhouse Environment</p>
+              <p>An IoT and Machine Learning-based greenhouse monitoring system designed to optimize water usage and detect Early Blight 
+                in tomato plants. It uses Raspberry Pi 4, environmental sensors, Fuzzy Logic Control, and YOLOv8n for real-time monitoring, automated watering, and disease detection.</p>
+              <span class="project-link">View project photos <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></span>
+            </div>
+          </button>
         </div>
       </section>
 
@@ -299,6 +311,26 @@
         </div>
       </section>
     </main>
+
+    <div class="project-modal" id="capstone-modal" role="dialog" aria-modal="true" aria-labelledby="capstone-modal-title" hidden>
+      <div class="project-modal-backdrop" data-close-modal></div>
+      <div class="project-modal-content">
+        <button class="modal-close" type="button" aria-label="Close project photos" data-close-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <p class="section-label">Capstone Project</p>
+        <h2 id="capstone-modal-title">TOMATOWISE</h2>
+        <p class="modal-project-title">Machine Learning-Based Tomato Care System With Prescriptive Analytics for Efficient Water Use and Early Blight Detection in a Greenhouse Environment</p>
+        <p class="modal-description">A machine learning-based hardware and software system that supports tomato care through data-driven watering recommendations and early disease detection.</p>
+
+        <div class="capstone-gallery">
+          <div class="gallery-image capstone-image-one" role="img" aria-label="Capstone hardware machine photo"></div>
+          <div class="gallery-image capstone-image-two" role="img" aria-label="Calibration process photo"></div>
+          <div class="gallery-image capstone-image-three" role="img" aria-label="Calibration monitoring web app screenshot"></div>
+        </div>
+        <p class="image-note">Add your photos in the <strong>images</strong> folder using the project image filenames.</p>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <div class="container footer-wrap">
