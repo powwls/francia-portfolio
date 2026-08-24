@@ -14,6 +14,7 @@
 
   <body>
 
+    <!-- Site header and navigation links -->
     <header class="site-header">
       <div class="container nav-wrap">
         <a href="#home" class="brand" aria-label="John Paul Francia home">
@@ -35,6 +36,7 @@
     </header>
 
     <main>
+      <!-- Home / hero section -->
       <section id="home" class="hero section">
         <div class="container hero-grid">
           <div class="hero-copy reveal">
@@ -44,11 +46,7 @@
               <span class="highlight-block">Francia</span>
             </h1>
             <p class="title-line">
-              And I’m a <span>Web Developer</span>
-            </p>
-            <p class="lead">
-              I’m a web developer and designer focused on building modern,
-              clean, and user-centered digital experiences that feel premium and memorable.
+              Aspiring Network Engineer | Full-Stack Developer
             </p>
 
             <div class="hero-actions">
@@ -74,86 +72,101 @@
         </div>
       </section>
 
+      <!-- About me and technical focus -->
       <section id="about" class="section about">
         <div class="container about-simple reveal">
           <div class="about-intro">
             <p class="section-label">About</p>
-            <h2>Focused on building and continuously improving my skills in web development</h2>
+            <h2>Building practical solutions through web development and networking</h2>
           </div>
 
           <div class="about-content">
             <p>
-              I am an aspiring developer who enjoys learning new technologies, building websites, and improving my skills through hands-on practice.
-            </p>
-            <p>
-              I have experience in programming languages such as Python, Java, and C/C++, as well as web development technologies including HTML, CSS, PHP, and React.js. Through our capstone project, 
-              I also gained knowledge and hands-on experience with machine learning. I enjoy building functional and user-friendly applications while continuously exploring new technologies and improving my skills.
+              I build small to medium-scale web systems, taking on different roles across my projects from full-stack and back-end development to designing practical and user-friendly interfaces. Alongside development, 
+              I have a strong foundation in networking and enjoy working on technical challenges that bring both areas together.
             </p>
           </div>
 
           <div class="about-tags" aria-label="Skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>PHP</span>
-            <span>React.js</span>
+            <span>Responsive Web Applications</span>
+            <span>Database Integration</span>
+            <span>React Interfaces</span>
+            <span>Networking</span>
           </div>
         </div>
       </section>
 
+      <!-- Portfolio projects section -->
       <section id="work" class="section work">
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-label">Portfolio</p>
             <h2>Selected Work</h2>
+            <span>A collection of projects showcasing my experience across web development, databases, interface design, and networking, with a focus on building practical and functional solutions.</span>
           </div>
 
-          <div class="project-grid">
-            <article class="project-card reveal">
-              <div class="project-visual visual-one"></div>
+          <div class="project-carousel" aria-label="Selected projects carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Show previous projects">
+              <i class="bx bx-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <!-- Portfolio project cards -->
+            <div class="project-carousel-viewport">
+              <div class="project-grid">
+                <article class="project-card purrfect-card reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="purrfect-modal">
               <div class="project-info">
                 <div class="tag-row">
                   <span>E-Commerce</span>
-                  <span>PHP</span>
-                  <span>JavaScript</span>
                 </div>
                 <h3>Purrfect Pets</h3>
                 <p>Designed and developed a pet e-commerce website using HTML, CSS, PHP and JavaScript 
                   with a responsive and user-friendly interface.</p>
               </div>
-            </article>
+              </article>
 
-            <article class="project-card reveal">
-              <div class="project-visual visual-two"></div>
+              <article class="project-card snoopy-card reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="snoopy-modal">
               <div class="project-info">
                 <div class="tag-row">
                   <span>Finance Tracker</span>
-                  <span>Python</span>
-                  <span>MySQL</span>
+                  <span>AI Integration</span>
                 </div>
                 <h3>Snoopy</h3>
-                <p>Developed a finance tracker application system using Python, focusing on data 
-                  processing, expense tracking, and financial summaries.</p>
+                <p>Developed the backend logic, database, and data visualization features for a 
+                  Python-based finance tracker, including transaction records and expense charts.</p>
               </div>
-            </article>
+              </article>
 
-            <article class="project-card reveal">
-              <div class="project-visual visual-three"></div>
+              <article class="project-card brew-card reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="brews-modal">
               <div class="project-info">
                 <div class="tag-row">
                   <span>Point of Sale</span>
-                  <span>Java</span>
-                  <span>MySQL</span>
+                  <span>AI Integration</span>
                 </div>
                 <h3>Brew's Co.</h3>
-                <p>Designed and developed a complete POS application system using Java, 
-                  handling sales transactions and product management.</p>
+                <p>Developed a Java-based POS system with AI-powered combo meal recommendations based on sales data.</p>
               </div>
-            </article>
+                </article>
+
+              <article class="project-card cuppa-card reveal" tabindex="0" role="button" aria-haspopup="dialog" aria-controls="cuppa-modal">
+              <div class="project-info">
+                <div class="tag-row">
+                  <span>UI/UX Design</span>
+                </div>
+                <h3>Cuppa Cue Coffee Shop</h3>
+                <p>Designed a mobile coffee ordering UI/UX focused on intuitive navigation and a seamless ordering experience.</p>
+              </div>
+                </article>
+              </div>
+            </div>
+
+
+            <button class="carousel-button carousel-next" type="button" aria-label="Show next projects">
+              <i class="bx bx-chevron-right" aria-hidden="true"></i>
+            </button>
           </div>
 
+          <!-- Capstone project / admin-style project details -->
           <button class="project-card capstone-card reveal" type="button" aria-haspopup="dialog" aria-controls="capstone-modal">
-            <div class="project-visual capstone-visual"></div>
             <div class="project-info">
               <div class="tag-row">
                 <span>Capstone Project</span>
@@ -167,94 +180,187 @@
               <span class="project-link">View project photos <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></span>
             </div>
           </button>
+
+          <article class="award-showcase reveal">
+            <div class="award-copy">
+              <p class="section-label">Recognition</p>
+              <h3>Research Conference 2025</h3>
+              <p>Recognized by the Research and Development Committee - RDC QC as one of the winners of the Research Conference 2025: Cosmic Innovations: Traversing the Universe of Intelligent Technologies.</p>
+            </div>
+            <button class="award-image-wrap" type="button" data-award-image="images/Award.jpg" aria-label="Open TOMATOWISE recognition image">
+              <img src="images/Award.jpg" alt="RDC-QC Research Conference 2025 recognition for TOMATOWISE" />
+            </button>
+          </article>
         </div>
       </section>
 
+      <!-- Skills and certifications section -->
       <section id="skills" class="section skills">
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-label">Skills</p>
             <h2>Core strengths behind the work.</h2>
+            <span>A versatile technical skill set spanning web development, programming, databases, and networking, applied to building practical and reliable solutions.</span>
           </div>
 
-          <div class="skills-grid">
-            <div class="skill-card reveal">
-              <i class="bx bxl-html5 skill-icon" aria-hidden="true"></i>
-              <h3>HTML</h3>
-            </div>
+          <div class="skills-carousel" aria-label="Skills carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Show previous skills">
+              <i class="bx bx-chevron-left" aria-hidden="true"></i>
+            </button>
 
-            <div class="skill-card reveal">
-              <i class="bx bxl-css3 skill-icon" aria-hidden="true"></i>
-              <h3>CSS</h3>
-            </div>
-
-            <div class="skill-card reveal">
+            <!-- Skills cards -->
+            <div class="skills-carousel-viewport">
+              <div class="skills-grid">
+                <div class="skill-card reveal">
               <i class="bx bxl-react skill-icon" aria-hidden="true"></i>
               <h3>React.js</h3>
-            </div>
+                </div>
 
-            <div class="skill-card reveal">
+              <div class="skill-card reveal">
               <i class="bx bxl-javascript skill-icon" aria-hidden="true"></i>
               <h3>JavaScript</h3>
-            </div>
+              </div>
 
-            <div class="skill-card reveal">
+              <div class="skill-card reveal">
               <i class="bx bxl-php skill-icon" aria-hidden="true"></i>
               <h3>PHP</h3>
-            </div>
+              </div>
 
-            <div class="skill-card reveal">
+              <div class="skill-card reveal">
               <i class="bx bxl-python skill-icon" aria-hidden="true"></i>
               <h3>Python</h3>
-            </div>
+              </div>
 
-            <div class="skill-card reveal">
+              <div class="skill-card reveal">
+              <i class="bx bxl-css3 skill-icon" aria-hidden="true"></i>
+              <h3>CSS</h3>
+              </div>
+
+              <div class="skill-card reveal">
+              <i class="bx bxl-html5 skill-icon" aria-hidden="true"></i>
+              <h3>HTML</h3>
+              </div>
+
+              <div class="skill-card reveal">
               <i class="bx bxl-mysql skill-icon" aria-hidden="true"></i>
               <h3>MySQL</h3>
-            </div>
+              </div>
 
-            <div class="skill-card reveal">
+              <div class="skill-card reveal">
               <i class="bx bxl-git skill-icon" aria-hidden="true"></i>
               <h3>Git</h3>
-            </div>
+              </div>
 
-            <div class="skill-card reveal">
+              <div class="skill-card reveal">
               <i class="bx bxl-github skill-icon" aria-hidden="true"></i>
               <h3>GitHub</h3>
+                </div>
+
+                <div class="skill-card reveal">
+              <i class="bx bxl-postgresql skill-icon" aria-hidden="true"></i>
+              <h3>PostgreSQL</h3>
+                </div>
+
+                <div class="skill-card reveal">
+              <i class="bx bxl-tux skill-icon" aria-hidden="true"></i>
+              <h3>Linux</h3>
+                </div>
+
+              </div>
             </div>
+
+            <button class="carousel-button carousel-next" type="button" aria-label="Show next skills">
+              <i class="bx bx-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Certification cards and certificate images -->
+          <div class="section-heading certification-heading reveal">
+            <p class="section-label">Certifications</p>
+            <h2>Credentials and continuous learning.</h2>
+            <span>Building a strong technical foundation through continuous learning in programming, networking, cybersecurity, and emerging technologies.</span>
+          </div>
+
+          <div class="certifications-carousel" aria-label="Certifications carousel">
+            <button class="carousel-button carousel-prev" type="button" aria-label="Show previous certifications">
+              <i class="bx bx-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="certifications-carousel-viewport">
+              <div class="certifications-grid">
+                <article class="certification-card reveal" role="button" tabindex="0" data-certificate="images/ITS - Python.png" data-certificate-title="ITS - Python">
+                  <div class="certification-image certification-image-one" role="img" aria-label="ITS Python certificate"></div>
+                  <div class="certification-info">
+                    <p class="certification-issuer">Information Technology Specialists</p>
+                    <h3>Python</h3>
+                  </div>
+                </article>
+
+                <article class="certification-card reveal" role="button" tabindex="0" data-certificate="images/Ethical Hacker.png" data-certificate-title="Ethical Hacker">
+                  <div class="certification-image certification-image-two" role="img" aria-label="Ethical Hacker certificate"></div>
+                  <div class="certification-info">
+                    <p class="certification-issuer">Cisco Networking Academy</p>
+                    <h3>Ethical Hacker</h3>
+                  </div>
+                </article>
+
+                <article class="certification-card reveal" role="button" tabindex="0" data-certificate="images/ITS - Networking.png" data-certificate-title="ITS - Networking">
+                  <div class="certification-image certification-image-three" role="img" aria-label="ITS Networking certificate"></div>
+                  <div class="certification-info">
+                    <p class="certification-issuer">Information Technology Specialists</p>
+                    <h3>Networking</h3>
+                  </div>
+                </article>
+
+                <article class="certification-card reveal" role="button" tabindex="0" data-certificate="images/CCNA- Switching Routing and Wireless Essentials.png" data-certificate-title="CCNA - Switching, Routing and Wireless Essentials">
+                  <div class="certification-image certification-image-four" role="img" aria-label="CCNA Switching Routing and Wireless Essentials certificate"></div>
+                  <div class="certification-info">
+                    <p class="certification-issuer">Cisco Networking Academy</p>
+                    <h3>CCNA: Switching, Routing and Wireless Essentials</h3>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button class="carousel-button carousel-next" type="button" aria-label="Show next certifications">
+              <i class="bx bx-chevron-right" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       </section>
 
+      <!-- Work process section -->
       <section id="process" class="section process">
         <div class="container">
           <div class="section-heading reveal">
             <p class="section-label">Work Process</p>
-            <h2>Simple, smooth, and built for results.</h2>
+            <h2>Think. Build. Troubleshoot. Improve.</h2>
+            <span>A practical approach to building systems, solving technical problems, and continuously improving solutions.</span>
           </div>
 
           <div class="process-grid">
             <div class="process-card reveal">
               <span class="process-number">01</span>
-              <h3>Discover</h3>
-              <p>We define goals, audience, and the feeling your brand should create.</p>
+              <h3>Analyze</h3>
+              <p>Understand requirements and identify the best technical approach.</p>
             </div>
 
             <div class="process-card reveal">
               <span class="process-number">02</span>
-              <h3>Design</h3>
-              <p>We shape layouts, typography, and interactions into a premium visual direction.</p>
+              <h3>Develop</h3>
+              <p>Build the system, implement features, and integrate databases and APIs.</p>
             </div>
 
             <div class="process-card reveal">
               <span class="process-number">03</span>
-              <h3>Develop</h3>
-              <p>We turn the design into responsive, accessible, and performance-minded code.</p>
+              <h3>Troubleshoot</h3>
+              <p>Test, debug, optimize, and resolve technical issues for a reliable solution.</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Testimonial section
       <section class="section testimonial">
         <div class="container">
           <div class="quote-box reveal">
@@ -265,25 +371,27 @@
               <span class="quote-dot"></span>
               <div>
                 <strong>Creative Direction</strong>
+
                 <small>Portfolio feedback</small>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
+      <!-- Contact section -->
       <section id="contact" class="section contact">
         <div class="container contact-wrap reveal">
           <div class="contact-heading">
             <p class="section-label">Contact</p>
-            <h2>Let’s build digital experiences that move your company forward.</h2>
+            <h2>Let’s build something useful together.</h2>
           </div>
 
           <div class="contact-panel">
             <div class="contact-intro">
               <h1>John Paul Francia</h1>
               <p>
-                Open to web development roles, project-based work, and opportunities where I can build practical systems and user-focused interfaces.
+                Open to web development, IT support, and technical roles where I can build reliable systems and solve real-world problems.
               </p>
             </div>
 
@@ -312,6 +420,53 @@
       </section>
     </main>
 
+    <!-- Purrfect Pets project modal -->
+    <div class="project-modal" id="purrfect-modal" role="dialog" aria-modal="true" aria-labelledby="purrfect-modal-title" hidden>
+      <div class="project-modal-backdrop" data-close-purrfect-modal></div>
+      <div class="project-modal-content purrfect-modal-content">
+        <button class="modal-close" type="button" aria-label="Close Purrfect Pets photos" data-close-purrfect-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <p class="section-label">E-Commerce</p>
+        <h2 id="purrfect-modal-title">Purrfect Pets</h2>
+        <p class="modal-description">An e-commerce website for browsing pet products and managing online purchases.</p>
+        <div class="project-gallery purrfect-gallery" aria-label="Purrfect Pets project images carousel">
+          <button class="gallery-control purrfect-gallery-prev" type="button" aria-label="Show previous Purrfect Pets image"><i class="bx bx-chevron-left" aria-hidden="true"></i></button>
+          <div class="project-gallery-viewport"><div class="project-gallery-track purrfect-gallery-track">
+            <img class="project-gallery-image" src="purrfectpets/one.png" alt="Purrfect Pets project image one" />
+            <img class="project-gallery-image" src="purrfectpets/two.png" alt="Purrfect Pets project image two" />
+            <img class="project-gallery-image" src="purrfectpets/three.png" alt="Purrfect Pets project image three" />
+            <img class="project-gallery-image" src="purrfectpets/four.png" alt="Purrfect Pets project image four" />
+          </div></div>
+          <button class="gallery-control purrfect-gallery-next" type="button" aria-label="Show next Purrfect Pets image"><i class="bx bx-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Snoopy project modal -->
+    <div class="project-modal" id="snoopy-modal" role="dialog" aria-modal="true" aria-labelledby="snoopy-modal-title" hidden>
+      <div class="project-modal-backdrop" data-close-snoopy-modal></div>
+      <div class="project-modal-content snoopy-modal-content">
+        <button class="modal-close" type="button" aria-label="Close Snoopy photos" data-close-snoopy-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <p class="section-label">Finance Tracker</p>
+        <h2 id="snoopy-modal-title">Snoopy</h2>
+        <p class="modal-description">A Python-based finance tracker with transaction records, backend logic, and expense charts.</p>
+        <div class="project-gallery snoopy-gallery" aria-label="Snoopy project images carousel">
+          <button class="gallery-control snoopy-gallery-prev" type="button" aria-label="Show previous Snoopy image"><i class="bx bx-chevron-left" aria-hidden="true"></i></button>
+          <div class="project-gallery-viewport"><div class="project-gallery-track snoopy-gallery-track">
+            <img class="project-gallery-image" src="snoopy/one.png" alt="Snoopy project image one" />
+            <img class="project-gallery-image" src="snoopy/two.png" alt="Snoopy project image two" />
+            <img class="project-gallery-image" src="snoopy/three.png" alt="Snoopy project image three" />
+            <img class="project-gallery-image" src="snoopy/four.png" alt="Snoopy project image four" />
+          </div></div>
+          <button class="gallery-control snoopy-gallery-next" type="button" aria-label="Show next Snoopy image"><i class="bx bx-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capstone project modal -->
     <div class="project-modal" id="capstone-modal" role="dialog" aria-modal="true" aria-labelledby="capstone-modal-title" hidden>
       <div class="project-modal-backdrop" data-close-modal></div>
       <div class="project-modal-content">
@@ -323,15 +478,104 @@
         <p class="modal-project-title">Machine Learning-Based Tomato Care System With Prescriptive Analytics for Efficient Water Use and Early Blight Detection in a Greenhouse Environment</p>
         <p class="modal-description">A machine learning-based hardware and software system that supports tomato care through data-driven watering recommendations and early disease detection.</p>
 
-        <div class="capstone-gallery">
-          <div class="gallery-image capstone-image-one" role="img" aria-label="Capstone hardware machine photo"></div>
-          <div class="gallery-image capstone-image-two" role="img" aria-label="Calibration process photo"></div>
-          <div class="gallery-image capstone-image-three" role="img" aria-label="Calibration monitoring web app screenshot"></div>
+        <div class="capstone-gallery" aria-label="TOMATOWISE project images carousel">
+          <button class="gallery-control gallery-prev" type="button" aria-label="Show previous TOMATOWISE image">
+            <i class="bx bx-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="gallery-viewport">
+            <div class="gallery-track">
+              <button class="gallery-image capstone-image-one" type="button" data-image="tomatowise/one.png" data-image-title="TOMATOWISE project image one" aria-label="Open TOMATOWISE image one"></button>
+              <button class="gallery-image capstone-image-two" type="button" data-image="tomatowise/two.png" data-image-title="TOMATOWISE project image two" aria-label="Open TOMATOWISE image two"></button>
+              <button class="gallery-image capstone-image-three" type="button" data-image="tomatowise/three.png" data-image-title="TOMATOWISE project image three" aria-label="Open TOMATOWISE image three"></button>
+              <button class="gallery-image capstone-image-four" type="button" data-image="tomatowise/four.png" data-image-title="TOMATOWISE project image four" aria-label="Open TOMATOWISE image four"></button>
+              <button class="gallery-image capstone-image-five" type="button" data-image="tomatowise/five.png" data-image-title="TOMATOWISE project image five" aria-label="Open TOMATOWISE image five"></button>
+              <button class="gallery-image capstone-image-six" type="button" data-image="tomatowise/six.png" data-image-title="TOMATOWISE project image six" aria-label="Open TOMATOWISE image six"></button>
+              <button class="gallery-image capstone-image-seven" type="button" data-image="tomatowise/seven.png" data-image-title="TOMATOWISE project image seven" aria-label="Open TOMATOWISE image seven"></button>
+            </div>
+          </div>
+          <button class="gallery-control gallery-next" type="button" aria-label="Show next TOMATOWISE image">
+            <i class="bx bx-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
-        <p class="image-note">Add your photos in the <strong>images</strong> folder using the project image filenames.</p>
       </div>
     </div>
 
+    <!-- Certificate image modal -->
+    <div class="project-modal" id="certificate-modal" role="dialog" aria-modal="true" aria-label="Certificate image" hidden>
+      <div class="project-modal-backdrop" data-close-certificate-modal></div>
+      <div class="project-modal-content certificate-modal-content">
+        <button class="modal-close" type="button" aria-label="Close certificate" data-close-certificate-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <img class="certificate-modal-image" src="" alt="" />
+      </div>
+    </div>
+
+    <!-- Brew's Co. project modal -->
+    <div class="project-modal" id="brews-modal" role="dialog" aria-modal="true" aria-labelledby="brews-modal-title" hidden>
+      <div class="project-modal-backdrop" data-close-brews-modal></div>
+      <div class="project-modal-content brews-modal-content">
+        <button class="modal-close" type="button" aria-label="Close Brew's Co. photos" data-close-brews-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <p class="section-label">Point of Sale</p>
+        <h2 id="brews-modal-title">Brew's Co.</h2>
+        <p class="modal-description">Java-based point-of-sale system with AI-powered combo meal recommendations.</p>
+        <div class="brews-gallery" aria-label="Brew's Co. project images carousel">
+          <button class="gallery-control brews-gallery-prev" type="button" aria-label="Show previous Brew's Co. image">
+            <i class="bx bx-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="brews-gallery-viewport">
+            <div class="brews-gallery-track">
+              <img class="brews-gallery-image" src="brew's Co/One.png" alt="Brew's Co. project image one" />
+              <img class="brews-gallery-image" src="brew's Co/two.png" alt="Brew's Co. project image two" />
+              <img class="brews-gallery-image" src="brew's Co/three.png" alt="Brew's Co. project image three" />
+              <img class="brews-gallery-image" src="brew's Co/four.png" alt="Brew's Co. project image four" />
+              <img class="brews-gallery-image" src="brew's Co/five.png" alt="Brew's Co. project image five" />
+              <img class="brews-gallery-image" src="brew's Co/six.png" alt="Brew's Co. project image six" />
+              <img class="brews-gallery-image" src="brew's Co/seven.png" alt="Brew's Co. project image seven" />
+              <img class="brews-gallery-image" src="brew's Co/eight.png" alt="Brew's Co. project image eight" />
+            </div>
+          </div>
+          <button class="gallery-control brews-gallery-next" type="button" aria-label="Show next Brew's Co. image">
+            <i class="bx bx-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cuppa Cue Coffee Shop project modal -->
+    <div class="project-modal" id="cuppa-modal" role="dialog" aria-modal="true" aria-labelledby="cuppa-modal-title" hidden>
+      <div class="project-modal-backdrop" data-close-cuppa-modal></div>
+      <div class="project-modal-content cuppa-modal-content">
+        <button class="modal-close" type="button" aria-label="Close Cuppa Cue photos" data-close-cuppa-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <p class="section-label">Coffee Shop</p>
+        <h2 id="cuppa-modal-title">Cuppa Cue Coffee Shop</h2>
+        <p class="modal-description">A mobile coffee ordering UI/UX focused on intuitive navigation and a seamless ordering experience.</p>
+        <div class="cuppa-gallery" aria-label="Cuppa Cue project images carousel">
+          <button class="gallery-control cuppa-gallery-prev" type="button" aria-label="Show previous Cuppa Cue image">
+            <i class="bx bx-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="cuppa-gallery-viewport">
+            <div class="cuppa-gallery-track">
+              <img class="cuppa-gallery-image" src="cuppacue/one.png" alt="Cuppa Cue project image one" />
+              <img class="cuppa-gallery-image" src="cuppacue/two.png" alt="Cuppa Cue project image two" />
+              <img class="cuppa-gallery-image" src="cuppacue/three.png" alt="Cuppa Cue project image three" />
+              <img class="cuppa-gallery-image" src="cuppacue/four.png" alt="Cuppa Cue project image four" />
+            </div>
+          </div>
+          <button class="gallery-control cuppa-gallery-next" type="button" aria-label="Show next Cuppa Cue image">
+            <i class="bx bx-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Site footer -->
     <footer class="site-footer">
       <div class="container footer-wrap">
         <p>© <span id="year"></span> John Paul Francia</p>
