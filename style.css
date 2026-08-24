@@ -1143,6 +1143,10 @@ body.modal-open {
   overflow-y: auto;
 }
 
+#certificate-modal {
+  z-index: 200;
+}
+
 .project-modal-backdrop {
   position: absolute;
   inset: 0;
@@ -1311,6 +1315,19 @@ body.modal-open {
   border-radius: 12px;
   object-fit: cover;
   background: #172235;
+}
+
+.project-gallery-image:focus-visible,
+.brews-gallery-image:focus-visible,
+.cuppa-gallery-image:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.project-gallery-image,
+.brews-gallery-image,
+.cuppa-gallery-image {
+  cursor: zoom-in;
 }
 
 /* ==================== Capstone gallery ==================== */

@@ -387,6 +387,20 @@ galleryImages.forEach((image) => {
   image.addEventListener('click', () => showGalleryImage(image));
 });
 
+const projectGalleryImages = document.querySelectorAll(
+  '.project-gallery-image, .brews-gallery-image, .cuppa-gallery-image'
+);
+
+projectGalleryImages.forEach((image) => {
+  image.addEventListener('click', () => showGalleryImage(image));
+  image.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      showGalleryImage(image);
+    }
+  });
+});
+
 awardImage.addEventListener('click', showAwardImage);
 
 certificateCards.forEach((card) => {
