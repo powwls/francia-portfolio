@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Author" content="John Paul Francia">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
     <link rel="website icon" type="png" size="1000x500"
         href="images/logo.png">
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" media="print" onload="this.media='all'">
     <title>John Paul Francia | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -66,7 +68,10 @@
 
               <div class="profile-shell">
                 <div class="profile-image-wrap">
-                  <img src="images/profile.jpg" alt="John Paul Francia portrait" />
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="images/logo.png" />
+                    <img src="images/profile.webp" alt="John Paul Francia portrait" width="900" height="900" fetchpriority="high" />
+                  </picture>
                 </div>
               </div>
 
@@ -203,7 +208,7 @@
               </a>
             </div>
             <button class="award-image-wrap" type="button" data-award-image="images/Award.jpg" aria-label="Open TOMATOWISE recognition image">
-              <img src="images/Award.jpg" alt="RDC-QC Research Conference 2025 recognition for TOMATOWISE" />
+              <img src="images/Award.jpg" alt="RDC-QC Research Conference 2025 recognition for TOMATOWISE" width="1200" height="800" loading="lazy" decoding="async" />
             </button>
           </article>
         </div>
@@ -486,10 +491,10 @@
         <div class="project-gallery purrfect-gallery" aria-label="Purrfect Pets project images carousel">
           <button class="gallery-control purrfect-gallery-prev" type="button" aria-label="Show previous Purrfect Pets image"><i class="bx bx-chevron-left" aria-hidden="true"></i></button>
           <div class="project-gallery-viewport"><div class="project-gallery-track purrfect-gallery-track">
-            <img class="project-gallery-image" src="purrfectpets/one.png" alt="Purrfect Pets project image one" data-image="purrfectpets/one.png" data-image-title="Purrfect Pets project image one" tabindex="0" role="button" />
-            <img class="project-gallery-image" src="purrfectpets/two.png" alt="Purrfect Pets project image two" data-image="purrfectpets/two.png" data-image-title="Purrfect Pets project image two" tabindex="0" role="button" />
-            <img class="project-gallery-image" src="purrfectpets/three.png" alt="Purrfect Pets project image three" data-image="purrfectpets/three.png" data-image-title="Purrfect Pets project image three" tabindex="0" role="button" />
-            <img class="project-gallery-image" src="purrfectpets/four.png" alt="Purrfect Pets project image four" data-image="purrfectpets/four.png" data-image-title="Purrfect Pets project image four" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="purrfectpets/one.png" alt="Purrfect Pets project image one" data-image="purrfectpets/one.png" data-image-title="Purrfect Pets project image one" loading="lazy" decoding="async" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="purrfectpets/two.png" alt="Purrfect Pets project image two" data-image="purrfectpets/two.png" data-image-title="Purrfect Pets project image two" loading="lazy" decoding="async" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="purrfectpets/three.png" alt="Purrfect Pets project image three" data-image="purrfectpets/three.png" data-image-title="Purrfect Pets project image three" loading="lazy" decoding="async" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="purrfectpets/four.png" alt="Purrfect Pets project image four" data-image="purrfectpets/four.png" data-image-title="Purrfect Pets project image four" loading="lazy" decoding="async" tabindex="0" role="button" />
           </div></div>
           <button class="gallery-control purrfect-gallery-next" type="button" aria-label="Show next Purrfect Pets image"><i class="bx bx-chevron-right" aria-hidden="true"></i></button>
         </div>
@@ -509,10 +514,10 @@
         <div class="project-gallery snoopy-gallery" aria-label="Snoopy project images carousel">
           <button class="gallery-control snoopy-gallery-prev" type="button" aria-label="Show previous Snoopy image"><i class="bx bx-chevron-left" aria-hidden="true"></i></button>
           <div class="project-gallery-viewport"><div class="project-gallery-track snoopy-gallery-track">
-            <img class="project-gallery-image" src="snoopy/one.png" alt="Snoopy project image one" data-image="snoopy/one.png" data-image-title="Snoopy project image one" tabindex="0" role="button" />
-            <img class="project-gallery-image" src="snoopy/two.png" alt="Snoopy project image two" data-image="snoopy/two.png" data-image-title="Snoopy project image two" tabindex="0" role="button" />
-            <img class="project-gallery-image" src="snoopy/three.png" alt="Snoopy project image three" data-image="snoopy/three.png" data-image-title="Snoopy project image three" tabindex="0" role="button" />
-            <img class="project-gallery-image" src="snoopy/four.png" alt="Snoopy project image four" data-image="snoopy/four.png" data-image-title="Snoopy project image four" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="snoopy/one.png" alt="Snoopy project image one" data-image="snoopy/one.png" data-image-title="Snoopy project image one" loading="lazy" decoding="async" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="snoopy/two.png" alt="Snoopy project image two" data-image="snoopy/two.png" data-image-title="Snoopy project image two" loading="lazy" decoding="async" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="snoopy/three.png" alt="Snoopy project image three" data-image="snoopy/three.png" data-image-title="Snoopy project image three" loading="lazy" decoding="async" tabindex="0" role="button" />
+            <img class="project-gallery-image" src="snoopy/four.png" alt="Snoopy project image four" data-image="snoopy/four.png" data-image-title="Snoopy project image four" loading="lazy" decoding="async" tabindex="0" role="button" />
           </div></div>
           <button class="gallery-control snoopy-gallery-next" type="button" aria-label="Show next Snoopy image"><i class="bx bx-chevron-right" aria-hidden="true"></i></button>
         </div>
@@ -596,14 +601,14 @@
           </button>
           <div class="brews-gallery-viewport">
             <div class="brews-gallery-track">
-              <img class="brews-gallery-image" src="brew's Co/One.png" alt="Brew's Co. project image one" data-image="brew's Co/One.png" data-image-title="Brew's Co. project image one" tabindex="0" role="button" />
-              <img class="brews-gallery-image" src="brew's Co/two.png" alt="Brew's Co. project image two" data-image="brew's Co/two.png" data-image-title="Brew's Co. project image two" tabindex="0" role="button" />
-              <img class="brews-gallery-image" src="brew's Co/three.png" alt="Brew's Co. project image three" data-image="brew's Co/three.png" data-image-title="Brew's Co. project image three" tabindex="0" role="button" />
-              <img class="brews-gallery-image" src="brew's Co/four.png" alt="Brew's Co. project image four" data-image="brew's Co/four.png" data-image-title="Brew's Co. project image four" tabindex="0" role="button" />
-              <img class="brews-gallery-image" src="brew's Co/five.png" alt="Brew's Co. project image five" data-image="brew's Co/five.png" data-image-title="Brew's Co. project image five" tabindex="0" role="button" />
-              <img class="brews-gallery-image" src="brew's Co/six.png" alt="Brew's Co. project image six" data-image="brew's Co/six.png" data-image-title="Brew's Co. project image six" tabindex="0" role="button" />
-              <img class="brews-gallery-image" src="brew's Co/seven.png" alt="Brew's Co. project image seven" data-image="brew's Co/seven.png" data-image-title="Brew's Co. project image seven" tabindex="0" role="button" />
-              <img class="brews-gallery-image" src="brew's Co/eight.png" alt="Brew's Co. project image eight" data-image="brew's Co/eight.png" data-image-title="Brew's Co. project image eight" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/One.png" alt="Brew's Co. project image one" data-image="brew's Co/One.png" data-image-title="Brew's Co. project image one" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/two.png" alt="Brew's Co. project image two" data-image="brew's Co/two.png" data-image-title="Brew's Co. project image two" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/three.png" alt="Brew's Co. project image three" data-image="brew's Co/three.png" data-image-title="Brew's Co. project image three" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/four.png" alt="Brew's Co. project image four" data-image="brew's Co/four.png" data-image-title="Brew's Co. project image four" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/five.png" alt="Brew's Co. project image five" data-image="brew's Co/five.png" data-image-title="Brew's Co. project image five" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/six.png" alt="Brew's Co. project image six" data-image="brew's Co/six.png" data-image-title="Brew's Co. project image six" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/seven.png" alt="Brew's Co. project image seven" data-image="brew's Co/seven.png" data-image-title="Brew's Co. project image seven" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="brews-gallery-image" src="brew's Co/eight.png" alt="Brew's Co. project image eight" data-image="brew's Co/eight.png" data-image-title="Brew's Co. project image eight" loading="lazy" decoding="async" tabindex="0" role="button" />
             </div>
           </div>
           <button class="gallery-control brews-gallery-next" type="button" aria-label="Show next Brew's Co. image">
@@ -629,10 +634,10 @@
           </button>
           <div class="cuppa-gallery-viewport">
             <div class="cuppa-gallery-track">
-              <img class="cuppa-gallery-image" src="cuppacue/one.png" alt="Cuppa Cue project image one" data-image="cuppacue/one.png" data-image-title="Cuppa Cue project image one" tabindex="0" role="button" />
-              <img class="cuppa-gallery-image" src="cuppacue/two.png" alt="Cuppa Cue project image two" data-image="cuppacue/two.png" data-image-title="Cuppa Cue project image two" tabindex="0" role="button" />
-              <img class="cuppa-gallery-image" src="cuppacue/three.png" alt="Cuppa Cue project image three" data-image="cuppacue/three.png" data-image-title="Cuppa Cue project image three" tabindex="0" role="button" />
-              <img class="cuppa-gallery-image" src="cuppacue/four.png" alt="Cuppa Cue project image four" data-image="cuppacue/four.png" data-image-title="Cuppa Cue project image four" tabindex="0" role="button" />
+              <img class="cuppa-gallery-image" src="cuppacue/one.png" alt="Cuppa Cue project image one" data-image="cuppacue/one.png" data-image-title="Cuppa Cue project image one" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="cuppa-gallery-image" src="cuppacue/two.png" alt="Cuppa Cue project image two" data-image="cuppacue/two.png" data-image-title="Cuppa Cue project image two" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="cuppa-gallery-image" src="cuppacue/three.png" alt="Cuppa Cue project image three" data-image="cuppacue/three.png" data-image-title="Cuppa Cue project image three" loading="lazy" decoding="async" tabindex="0" role="button" />
+              <img class="cuppa-gallery-image" src="cuppacue/four.png" alt="Cuppa Cue project image four" data-image="cuppacue/four.png" data-image-title="Cuppa Cue project image four" loading="lazy" decoding="async" tabindex="0" role="button" />
             </div>
           </div>
           <button class="gallery-control cuppa-gallery-next" type="button" aria-label="Show next Cuppa Cue image">

@@ -1,6 +1,4 @@
 /* ==================== Global styles ==================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-
 :root {
   --bg: #071b2a;
   --bg-soft: #0d2536;
@@ -413,6 +411,12 @@ main,
   overflow: hidden;
   border-radius: inherit;
   background: #061a2c;
+}
+
+.profile-image-wrap picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .profile-image-wrap img {
@@ -2243,6 +2247,14 @@ body.modal-open {
   /* Hide the profile image on mobile to keep the hero section compact. */
   .hero-visual {
     display: none;
+  }
+
+  .bg-blur {
+    display: none;
+  }
+
+  .site-header {
+    backdrop-filter: none;
   }
 
   .container {
