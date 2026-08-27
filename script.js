@@ -18,6 +18,25 @@ const revealObserver = new IntersectionObserver(
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
+// Filter the skills panels without changing the surrounding section layout.
+const skillFilterButtons = document.querySelectorAll('[data-skill-filter]');
+const skillCategories = document.querySelectorAll('[data-skill-category]');
+
+skillFilterButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const selectedCategory = button.dataset.skillFilter;
+
+    skillFilterButtons.forEach((filterButton) => {
+      filterButton.classList.toggle('is-active', filterButton === button);
+    });
+
+    skillCategories.forEach((category) => {
+      const shouldShow = selectedCategory === 'all' || category.dataset.skillCategory === selectedCategory;
+      category.classList.toggle('is-hidden', !shouldShow);
+    });
+  });
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Portfolio project carousel controls.
@@ -58,45 +77,6 @@ nextProjectButton.addEventListener('click', () => {
 
 window.addEventListener('resize', updateProjectCarousel);
 updateProjectCarousel();
-
-// Skills carousel controls.
-const skillsCarousel = document.querySelector('.skills-carousel');
-const skillsTrack = skillsCarousel.querySelector('.skills-grid');
-const skillCards = skillsCarousel.querySelectorAll('.skill-card');
-const previousSkillButton = skillsCarousel.querySelector('.carousel-prev');
-const nextSkillButton = skillsCarousel.querySelector('.carousel-next');
-let skillIndex = 0;
-
-const getSkillsPerView = () => {
-  if (window.matchMedia('(max-width: 767px)').matches) return 1;
-  if (window.matchMedia('(max-width: 1024px)').matches) return 2;
-  return 4;
-};
-
-const updateSkillsCarousel = () => {
-  const skillsPerView = getSkillsPerView();
-  const maxIndex = Math.max(0, skillCards.length - skillsPerView);
-  skillIndex = Math.min(skillIndex, maxIndex);
-  const cardWidth = skillCards[0].getBoundingClientRect().width;
-  const gap = Number.parseFloat(getComputedStyle(skillsTrack).gap) || 0;
-
-  skillsTrack.style.transform = `translateX(-${skillIndex * (cardWidth + gap)}px)`;
-  previousSkillButton.disabled = skillIndex === 0;
-  nextSkillButton.disabled = skillIndex === maxIndex;
-};
-
-previousSkillButton.addEventListener('click', () => {
-  skillIndex -= 1;
-  updateSkillsCarousel();
-});
-
-nextSkillButton.addEventListener('click', () => {
-  skillIndex += 1;
-  updateSkillsCarousel();
-});
-
-window.addEventListener('resize', updateSkillsCarousel);
-updateSkillsCarousel();
 
 // Certification carousel controls.
 const certificationsCarousel = document.querySelector('.certifications-carousel');
@@ -141,24 +121,16 @@ updateCertificationsCarousel();
 const capstoneCard = document.querySelector('.capstone-card');
 const capstoneModal = document.getElementById('capstone-modal');
 const modalCloseButtons = document.querySelectorAll('[data-close-modal]');
-const brewsCard = document.querySelector('.brew-card');
-const brewsModal = document.getElementById('brews-modal');
-const cuppaCard = document.querySelector('.cuppa-card');
-const cuppaModal = document.getElementById('cuppa-modal');
 const cuppaGalleryTrack = document.querySelector('.cuppa-gallery-track');
 const cuppaGalleryImages = document.querySelectorAll('.cuppa-gallery-image');
 const previousCuppaGalleryButton = document.querySelector('.cuppa-gallery-prev');
 const nextCuppaGalleryButton = document.querySelector('.cuppa-gallery-next');
 let cuppaGalleryIndex = 0;
-const purrfectCard = document.querySelector('.purrfect-card');
-const purrfectModal = document.getElementById('purrfect-modal');
 const purrfectGalleryTrack = document.querySelector('.purrfect-gallery-track');
 const purrfectGalleryImages = document.querySelectorAll('.purrfect-gallery-image');
 const previousPurrfectGalleryButton = document.querySelector('.purrfect-gallery-prev');
 const nextPurrfectGalleryButton = document.querySelector('.purrfect-gallery-next');
 let purrfectGalleryIndex = 0;
-const snoopyCard = document.querySelector('.snoopy-card');
-const snoopyModal = document.getElementById('snoopy-modal');
 const snoopyGalleryTrack = document.querySelector('.snoopy-gallery-track');
 const snoopyGalleryImages = document.querySelectorAll('.snoopy-gallery-image');
 const previousSnoopyGalleryButton = document.querySelector('.snoopy-gallery-prev');
@@ -270,87 +242,6 @@ const closeCapstoneModal = () => {
   document.body.classList.remove('modal-open');
 };
 
-// Open the capstone project details modal.
-capstoneCard.addEventListener('click', () => {
-  capstoneModal.hidden = false;
-  document.body.classList.add('modal-open');
-});
-
-const closeBrewsModal = () => {
-  brewsModal.hidden = true;
-  document.body.classList.remove('modal-open');
-};
-
-brewsCard.addEventListener('click', () => {
-  brewsModal.hidden = false;
-  document.body.classList.add('modal-open');
-});
-
-brewsCard.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    brewsModal.hidden = false;
-    document.body.classList.add('modal-open');
-  }
-});
-
-brewsModal.querySelectorAll('[data-close-brews-modal]').forEach((button) => {
-  button.addEventListener('click', closeBrewsModal);
-});
-
-const closeCuppaModal = () => {
-  cuppaModal.hidden = true;
-  document.body.classList.remove('modal-open');
-};
-
-cuppaCard.addEventListener('click', () => {
-  cuppaModal.hidden = false;
-  document.body.classList.add('modal-open');
-});
-
-cuppaCard.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    cuppaModal.hidden = false;
-    document.body.classList.add('modal-open');
-  }
-});
-
-cuppaModal.querySelectorAll('[data-close-cuppa-modal]').forEach((button) => {
-  button.addEventListener('click', closeCuppaModal);
-});
-
-const openModalFromCard = (card, modal) => {
-  card.addEventListener('click', () => {
-    modal.hidden = false;
-    document.body.classList.add('modal-open');
-  });
-
-  card.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      modal.hidden = false;
-      document.body.classList.add('modal-open');
-    }
-  });
-};
-
-const closeProjectModal = (modal) => {
-  modal.hidden = true;
-  document.body.classList.remove('modal-open');
-};
-
-openModalFromCard(purrfectCard, purrfectModal);
-openModalFromCard(snoopyCard, snoopyModal);
-
-purrfectModal.querySelectorAll('[data-close-purrfect-modal]').forEach((button) => {
-  button.addEventListener('click', () => closeProjectModal(purrfectModal));
-});
-
-snoopyModal.querySelectorAll('[data-close-snoopy-modal]').forEach((button) => {
-  button.addEventListener('click', () => closeProjectModal(snoopyModal));
-});
-
 modalCloseButtons.forEach((button) => {
   button.addEventListener('click', closeCapstoneModal);
 });
@@ -413,6 +304,10 @@ certificateCards.forEach((card) => {
   });
 });
 
+document.querySelectorAll('.credential-link').forEach((link) => {
+  link.addEventListener('click', (event) => event.stopPropagation());
+});
+
 certificateModal.querySelectorAll('[data-close-certificate-modal]').forEach((button) => {
   button.addEventListener('click', closeCertificateModal);
 });
@@ -427,19 +322,4 @@ document.addEventListener('keydown', (event) => {
     closeCertificateModal();
   }
 
-  if (event.key === 'Escape' && !brewsModal.hidden) {
-    closeBrewsModal();
-  }
-
-  if (event.key === 'Escape' && !cuppaModal.hidden) {
-    closeCuppaModal();
-  }
-
-  if (event.key === 'Escape' && !purrfectModal.hidden) {
-    closeProjectModal(purrfectModal);
-  }
-
-  if (event.key === 'Escape' && !snoopyModal.hidden) {
-    closeProjectModal(snoopyModal);
-  }
 });

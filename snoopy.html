@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="John Paul Francia">
+    <link rel="website icon" type="png" size="1000x500"
+        href="images/logo.png">
+    <title>Snoopy</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="project-page project-snoopy">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="images/logo.png" alt="" />
+          </span>
+          <span>John Paul Francia</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="project-page-main">
+      <div class="container">
+        <a class="project-page-back" href="index.html#work">
+          <i class="bx bx-left-arrow-alt" aria-hidden="true"></i>
+          Back to selected work
+        </a>
+        <header class="project-page-header">
+          <div class="tag-row">
+            <span>Finance Tracker</span>
+            <span>Python</span>
+            <span>AI Integration</span>
+          </div>
+          <h1>Snoopy</h1>
+          <p class="project-summary">
+            A Python-based finance tracker that organizes transactions and turns spending data into useful visual summaries.
+          </p>
+        </header>
+
+          <section class="detail-gallery-wrap" aria-label="Snoopy project images">
+            <div class="detail-gallery">
+              <div class="detail-gallery-track">
+                <img class="detail-image" src="snoopy/one.png" alt="Snoopy project screen one" tabindex="0" />
+                <img class="detail-image" src="snoopy/two.png" alt="Snoopy project screen two" tabindex="0" />
+                <img class="detail-image" src="snoopy/three.png" alt="Snoopy project screen three" tabindex="0" />
+                <img class="detail-image" src="snoopy/four.png" alt="Snoopy project screen four" tabindex="0" />
+              </div>
+            </div>
+            <p class="image-note">Select an image to view it larger.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="project-modal image-modal" id="image-modal" role="dialog" aria-modal="true" aria-label="Project image" hidden>
+      <div class="project-modal-backdrop" data-close-image-modal></div>
+      <div class="project-modal-content">
+        <button class="modal-close" type="button" aria-label="Close image" data-close-image-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <img class="image-modal-image" src="" alt="" />
+      </div>
+    </div>
+    <script src="project-page.js"></script>
+  </body>
+</html>
