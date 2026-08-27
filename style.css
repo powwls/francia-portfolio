@@ -1230,19 +1230,19 @@ main,
   background-color: #172235;
 }
 
-.certification-image-one {
+.certification-card.visible .certification-image-one {
   background-image: url("images/ITS - Python.png");
 }
 
-.certification-image-two {
+.certification-card.visible .certification-image-two {
   background-image: url("images/Ethical Hacker.png");
 }
 
-.certification-image-three {
+.certification-card.visible .certification-image-three {
   background-image: url("images/ITS - Networking.png");
 }
 
-.certification-image-four {
+.certification-card.visible .certification-image-four {
   background-image: url("images/CCNA- Switching Routing and Wireless Essentials.png");
 }
 
@@ -1826,31 +1826,31 @@ body.modal-open {
   font-size: 1.5rem;
 }
 
-.capstone-image-one {
+.project-modal:not([hidden]) .capstone-image-one {
   background-image: url("tomatowise/one.png"), linear-gradient(135deg, #164e63, #0f172a);
 }
 
-.capstone-image-two {
+.project-modal:not([hidden]) .capstone-image-two {
   background-image: url("tomatowise/two.png"), linear-gradient(135deg, #155e75, #1e3a8a);
 }
 
-.capstone-image-three {
+.project-modal:not([hidden]) .capstone-image-three {
   background-image: url("tomatowise/three.png"), linear-gradient(135deg, #1e3a8a, #0d2536);
 }
 
-.capstone-image-four {
+.project-modal:not([hidden]) .capstone-image-four {
   background-image: url("tomatowise/four.png"), linear-gradient(135deg, #164e63, #0f172a);
 }
 
-.capstone-image-five {
+.project-modal:not([hidden]) .capstone-image-five {
   background-image: url("tomatowise/five.png"), linear-gradient(135deg, #155e75, #1e3a8a);
 }
 
-.capstone-image-six {
+.project-modal:not([hidden]) .capstone-image-six {
   background-image: url("tomatowise/six.png"), linear-gradient(135deg, #1e3a8a, #0d2536);
 }
 
-.capstone-image-seven {
+.project-modal:not([hidden]) .capstone-image-seven {
   background-image: url("tomatowise/seven.png"), linear-gradient(135deg, #164e63, #0f172a);
 }
 
