@@ -26,7 +26,11 @@
           <span>John Paul Francia</span>
         </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">
+          <i class="bx bx-menu" aria-hidden="true"></i>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#work">Work</a>
@@ -126,16 +130,6 @@
             <!-- Portfolio project cards -->
             <div class="project-carousel-viewport">
               <div class="project-grid">
-                <a class="project-card capstone-card reveal" href="tomatowise.html">
-                  <div class="project-info">
-                    <div class="tag-row">
-                      <span>Capstone Project</span>
-                    </div>
-                    <h3>TomatoWise</h3>
-                    <p>Handled hardware integration and Raspberry Pi programming, implemented Fuzzy Logic control, and trained the YOLOv8s model for early blight detection.</p>
-                  </div>
-                </a>
-
                 <a class="project-card purrfect-card reveal" href="purrfect-pets.html">
               <div class="project-info">
                 <div class="tag-row">
@@ -187,6 +181,17 @@
             </button>
           </div>
 
+          <a class="project-card capstone-card featured-project reveal" href="tomatowise.html">
+            <div class="project-info">
+              <div class="tag-row">
+                <span>Capstone Project</span>
+              </div>
+              <h3>TomatoWise</h3>
+              <p>Machine learning and IoT-based tomato care system for efficient water use and early blight detection. Handled hardware integration and Raspberry Pi programming, implemented Fuzzy Logic control, and trained the YOLOv8s model.</p>
+              <span class="project-link">View TomatoWise <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></span>
+            </div>
+          </a>
+
           <article class="award-showcase reveal">
             <div class="award-copy">
               <p class="section-label">Recognition</p>
@@ -211,6 +216,7 @@
               <img src="images/Award.jpg" alt="RDC-QC Research Conference 2025 recognition for TOMATOWISE" width="1200" height="800" loading="lazy" decoding="async" />
             </button>
           </article>
+
         </div>
       </section>
 
@@ -224,8 +230,7 @@
           </div>
 
           <div class="skills-filter" role="group" aria-label="Filter skills by category">
-            <button class="skills-filter-button is-active" type="button" data-skill-filter="all"><i class="bx bx-bolt" aria-hidden="true"></i>All</button>
-            <button class="skills-filter-button" type="button" data-skill-filter="development"><i class="bx bx-code-alt" aria-hidden="true"></i>Development</button>
+            <button class="skills-filter-button is-active" type="button" data-skill-filter="development"><i class="bx bx-code-alt" aria-hidden="true"></i>Development</button>
             <button class="skills-filter-button" type="button" data-skill-filter="backend"><i class="bx bx-data" aria-hidden="true"></i>Backend Data</button>
             <button class="skills-filter-button" type="button" data-skill-filter="networking"><i class="bx bx-network-chart" aria-hidden="true"></i>Network & Systems</button>
             <button class="skills-filter-button" type="button" data-skill-filter="ai"><i class="bx bx-brain" aria-hidden="true"></i>AI & Emerging</button>
@@ -250,7 +255,7 @@
             <article class="technology-card reveal" data-skill-category="ai"><div class="technology-icon bot-icon"><i class="bx bx-bot" aria-hidden="true"></i></div><div><h3>AI Model Training</h3><p>AI & Emerging</p></div></article>
             <article class="technology-card reveal" data-skill-category="ai"><div class="technology-icon bot-icon"><i class="bx bx-scan" aria-hidden="true"></i></div><div><h3>Computer Vision</h3><p>AI & Emerging</p></div></article>
             <article class="technology-card reveal" data-skill-category="tools"><div class="technology-icon git-icon"><i class="bx bxl-git" aria-hidden="true"></i></div><div><h3>Git</h3><p>Tools</p></div></article>
-            <article class="technology-card reveal" data-skill-category="tools"><div class="technology-icon github-icon"><i class="bx bxl-github" aria-hidden="true"></i></div><div><h3>GitHub</h3><p>Tools</p></div></article>
+                <article class="technology-card reveal" data-skill-category="tools"><div class="technology-icon github-icon"><i class="bx bxl-github" aria-hidden="true"></i></div><div><h3>GitHub</h3><p>Tools</p></div></article>
           </div>
 
           <!-- Certification cards and certificate images -->

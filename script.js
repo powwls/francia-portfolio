@@ -18,6 +18,30 @@ const revealObserver = new IntersectionObserver(
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
+const navToggle = document.querySelector('.nav-toggle');
+const mainNav = document.querySelector('#main-nav');
+const navToggleIcon = navToggle ? navToggle.querySelector('i') : null;
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    navToggleIcon?.classList.toggle('bx-menu', !isOpen);
+    navToggleIcon?.classList.toggle('bx-x', isOpen);
+  });
+
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open navigation');
+      navToggleIcon?.classList.add('bx-menu');
+      navToggleIcon?.classList.remove('bx-x');
+    });
+  });
+}
+
 // Filter the skills panels without changing the surrounding section layout.
 const skillFilterButtons = document.querySelectorAll('[data-skill-filter]');
 const skillCategories = document.querySelectorAll('[data-skill-category]');
@@ -31,11 +55,18 @@ skillFilterButtons.forEach((button) => {
     });
 
     skillCategories.forEach((category) => {
-      const shouldShow = selectedCategory === 'all' || category.dataset.skillCategory === selectedCategory;
+      const shouldShow = category.dataset.skillCategory === selectedCategory;
       category.classList.toggle('is-hidden', !shouldShow);
+
+      if (shouldShow) {
+        category.classList.add('visible');
+      }
     });
+
   });
 });
+
+document.querySelector('[data-skill-filter="development"]')?.click();
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
