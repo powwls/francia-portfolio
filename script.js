@@ -70,6 +70,29 @@ document.querySelector('[data-skill-filter="development"]')?.click();
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
+document.querySelectorAll('[data-copy-email]').forEach((copyButton) => {
+  const copyEmail = async () => {
+    const email = copyButton.dataset.copyEmail;
+    await navigator.clipboard.writeText(email);
+    const label = copyButton.querySelector('span');
+    label.textContent = 'Email copied';
+    copyButton.querySelector('i').className = 'bx bx-check';
+
+    window.setTimeout(() => {
+      label.textContent = email;
+      copyButton.querySelector('i').className = 'bx bx-right-arrow-alt';
+    }, 1800);
+  };
+
+  copyButton.addEventListener('click', copyEmail);
+  copyButton.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      copyEmail();
+    }
+  });
+});
+
 // Portfolio project carousel controls.
 const projectCarousel = document.querySelector('.project-carousel');
 const projectTrack = projectCarousel.querySelector('.project-grid');

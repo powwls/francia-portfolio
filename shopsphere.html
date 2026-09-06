@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="John Paul Francia">
+    <link rel="website icon" type="png" size="1000x500"
+        href="images/logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
+    <title>ShopSphere</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="project-page project-shopsphere">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="John Paul Francia home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="images/logo.png" alt="" />
+          </span>
+          <span>John Paul Francia</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="project-page-main">
+      <div class="container">
+        <a class="project-page-back" href="index.html#work">
+          <i class="bx bx-left-arrow-alt" aria-hidden="true"></i>
+          Back to selected work
+        </a>
+
+        <header class="project-page-header">
+          <div class="tag-row">
+            <span>E-Commerce</span>
+            <span>React.js</span>
+          </div>
+          <h1>ShopSphere</h1>
+          <p class="project-summary">
+            Developed a full-stack e-commerce website, ShopSphere, designed to provide users with a simple, responsive, and user-friendly 
+            platform for browsing products and managing online purchases. The website was built using React.js for the frontend, Node.js 
+            for the backend, and MySQL for database management, implementing core e-commerce features such as product browsing, category 
+            filtering, search functionality, shopping cart management, user authentication, wishlist management, checkout, and order 
+            processing. As the sole developer, I handled the complete development process, including designing the user interface, 
+            developing frontend components, implementing backend functionality, integrating the database, and developing the website's 
+            core features. The completed website provided an organized and responsive shopping experience while demonstrating my 
+            ability to independently develop and integrate a full-stack e-commerce system from frontend to backend.
+          </p>
+          <a class="project-link" href="https://github.com/powwls/ShopSphere" target="_blank" rel="noreferrer">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+            View on GitHub
+            <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+          </a>
+        </header>
+
+
+          <section class="detail-gallery-wrap" aria-label="ShopSphere project images">
+            <div class="detail-gallery">
+              <div class="detail-gallery-track">
+                <img class="detail-image" src="shopsphere/one.png" alt="ShopSphere project screen one" tabindex="0" />
+                <img class="detail-image" src="shopsphere/two.png" alt="ShopSphere project screen two" tabindex="0" />
+                <img class="detail-image" src="shopsphere/three.png" alt="ShopSphere project screen three" tabindex="0" />
+                <img class="detail-image" src="shopsphere/four.png" alt="ShopSphere project screen four" tabindex="0" />
+                <img class="detail-image" src="shopsphere/five.png" alt="ShopSphere project screen five" tabindex="0" />
+                <img class="detail-image" src="shopsphere/six.png" alt="ShopSphere project screen six" tabindex="0" />
+                <img class="detail-image" src="shopsphere/seven.png" alt="ShopSphere project screen seven" tabindex="0" />
+                <img class="detail-image" src="shopsphere/eight.png" alt="ShopSphere project screen eight" tabindex="0" />
+                <img class="detail-image" src="shopsphere/nine.png" alt="ShopSphere project screen nine" tabindex="0" />
+                <img class="detail-image" src="shopsphere/ten.png" alt="ShopSphere project screen ten" tabindex="0" />
+              </div>
+            </div>
+            <p class="image-note">Select an image to view it larger.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div class="project-modal image-modal" id="image-modal" role="dialog" aria-modal="true" aria-label="Project image" hidden>
+      <div class="project-modal-backdrop" data-close-image-modal></div>
+      <div class="project-modal-content">
+        <button class="modal-close" type="button" aria-label="Close image" data-close-image-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <img class="image-modal-image" src="" alt="" />
+      </div>
+    </div>
+    <script src="project-page.js"></script>
+  </body>
+</html>
