@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="John Paul Francia" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
+    <link rel="website icon" type="png" href="images/logo.png" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <title>Nexora | John Paul Francia</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="project-page project-nexora">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="John Paul Francia home">
+          <span class="brand-mark" aria-hidden="true"><img src="images/logo.png" alt="" /></span>
+          <span>John Paul Francia</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="project-page-main nexora-main">
+      <div class="container">
+        <a class="project-page-back" href="index.html#work">
+          <i class="bx bx-left-arrow-alt" aria-hidden="true"></i>
+          Back to selected work
+        </a>
+
+        <header class="project-page-header">
+          <div class="tag-row">
+            <span>IT Infrastructure</span>
+            <span>Full-Stack Web App</span>
+            <span>Admin Dashboard</span>
+          </div>
+          <h1>Nexora</h1>
+          <p class="project-summary">
+            Nexora is a full-stack IT infrastructure management dashboard designed to streamline asset tracking, employee records, network 
+            inventory, and maintenance workflows in one centralized platform. Built with Next.js, TypeScript, Tailwind CSS, and PostgreSQL, 
+            the application provides a secure admin experience with protected login, dashboard analytics, and responsive interfaces for 
+            managing operational data efficiently.
+            The project includes features such as asset management with CRUD operations and search, employee and network device tracking, 
+            maintenance ticket monitoring, and workspace reporting tools. I developed the full application from the frontend interface to 
+            the backend API and database integration, focusing on clean UI design, functional data handling, and a scalable structure 
+            suitable for real-world IT operations. The result is a comprehensive management system that demonstrates my ability to build 
+            secure, data-driven web applications with modern technologies.
+          </p>
+          <div class="nexora-meta" aria-label="Project details">
+            <span><strong>Role</strong> Full-stack developer</span>
+            <span><strong>Focus</strong> IT infrastructure management</span>
+            <span><strong>Interface</strong> Admin dashboard</span>
+          </div>
+          <a class="project-link" href="https://github.com/powwls/Nexora" target="_blank" rel="noreferrer">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+            View on GitHub
+            <i class="bx bx-right-arrow-alt" aria-hidden="true"></i>
+          </a>
+        </header>
+
+        <section class="detail-gallery-wrap" aria-label="Nexora project images">
+          <div class="detail-gallery">
+            <div class="detail-gallery-track">
+              <img class="detail-image" src="nexora/one.png" alt="Nexora project screen one" tabindex="0" />
+              <img class="detail-image" src="nexora/two.png" alt="Nexora project screen two" tabindex="0" />
+              <img class="detail-image" src="nexora/three.png" alt="Nexora project screen three" tabindex="0" />
+              <img class="detail-image" src="nexora/four.png" alt="Nexora project screen four" tabindex="0" />
+              <img class="detail-image" src="nexora/five.png" alt="Nexora project screen five" tabindex="0" />
+              <img class="detail-image" src="nexora/six.png" alt="Nexora project screen six" tabindex="0" />
+              <img class="detail-image" src="nexora/seven.png" alt="Nexora project screen seven" tabindex="0" />
+              <img class="detail-image" src="nexora/eight.png" alt="Nexora project screen eight" tabindex="0" />
+            </div>
+          </div>
+          <p class="image-note">Select an image to view it larger.</p>
+        </section>
+
+      </div>
+    </main>
+    <div class="project-modal image-modal" id="image-modal" role="dialog" aria-modal="true" aria-label="Project image" hidden>
+      <div class="project-modal-backdrop" data-close-image-modal></div>
+      <div class="project-modal-content">
+        <button class="modal-close" type="button" aria-label="Close image" data-close-image-modal>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+        <img class="image-modal-image" src="" alt="" />
+      </div>
+    </div>
+    <script src="project-page.js"></script>
+  </body>
+</html>
