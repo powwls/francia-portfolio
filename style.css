@@ -1143,6 +1143,7 @@ main,
 .next-icon { --technology-color: #f2f7fa; background: rgba(242, 247, 250, 0.14); }
 .typescript-icon { --technology-color: #5b9bd5; background: rgba(91, 155, 213, 0.18); }
 .tailwind-icon { --technology-color: #58c4e7; background: rgba(88, 196, 231, 0.18); }
+.shopify-icon { --technology-color: #95bf47; background: rgba(149, 191, 71, 0.18); }
 .html-icon { --technology-color: #ff7650; background: rgba(255, 118, 80, 0.18); }
 .css-icon { --technology-color: #4ca7e8; background: rgba(76, 167, 232, 0.18); }
 .php-icon { --technology-color: #aeb7f5; background: rgba(174, 183, 245, 0.18); }
@@ -1310,6 +1311,10 @@ main,
   background-position: center;
   background-size: cover;
   background-color: #172235;
+}
+
+.certification-card.visible .certification-image-five {
+  background-image: url("images/Udemy - Shopify.jpg");
 }
 
 .certification-card.visible .certification-image-one {
